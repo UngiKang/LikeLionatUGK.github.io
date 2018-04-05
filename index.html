@@ -28,7 +28,7 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="height: 54px;">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Like Lion at UGK</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -248,12 +248,14 @@
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 mb-5 text-center">
               <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
               <h3 class="section-subheading text-muted">Nine Lions of LikeLion at KGU</h3>
+              <a id="toggle" href="#team">Do You Want to See More Our Team? Click Here!</a>
             </div>
         </div>
-        <div id="myDiv">
+        <div id="foo" style="display:none;">
+          <div id="myDiv">
           <div class="row">
               <div class="col-sm-4">
                 <div class="team-member">
@@ -476,6 +478,7 @@
               <div class="col-lg-8 mx-auto text-center">
                 <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
               </div>
+        </div>
         </div>
         </div>
       </div>
@@ -813,7 +816,24 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-      
+    
+    <!-- Team part Hide%Show-->
+    <script>
+    $(document).ready(function(){
+      $("#toggle").click(function(){
+        if ($("#toggle").text() === "Do You Want to See More Our Team? Click Here!") {
+          
+          $("#toggle").text("Do You Want to Stop? Click Here!");
+          $("#foo").css('display', 'block');
+        } else {
+          
+          $("#toggle").text("Do You Want to See More Our Team? Click Here!");
+          $("#foo").css('display', 'none');
+        }
+      });
+    });
+    </script>
+
   </body>
 
 </html>
